@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\ConsumoApiController;
-use App\Http\Controllers\Controller;
-use App\Http\Controllers\ApiConsumer;
+use App\Http\Controllers\EventsController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +15,4 @@ use App\Http\Controllers\ApiConsumer;
 |
 */
 
-Route::get('/',function(){
-    return view('welcome');
-});
+Route::get('/',[RegisterController::class,'index']);

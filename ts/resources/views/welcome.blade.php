@@ -21,17 +21,10 @@
         </style>
     </head>
     <body class="antialiased">
-            <h1>Título Da Pagina:</h1>
-
-            <p>Seja bem vindo {{$nome}}</p>
-            <p> Sua idade é de : {{$idade}}</p>
-            <p>O seu sexo é:{{$sexo}}</p>   
-            
-        @for($i = 0; $i < count($alunos); $i++)
-        <p> alunos: {{$alunos[$i]}} notas: {{$notas[$i]}}</p>
-        @endfor
-        @foreach($event as $events)
-                <p>{{$events->title}} {{$events->Description}}</p>
-        @endforeach
+            <h1>Lista de alunos:</h1>
+            @foreach($Alunos as $aluno)
+            <li>Nome:{{$aluno->nome}}}</li>
+            <li>idade:{{$aluno->idade}}</li>
+            <li></li>
     </body>
 </html>
